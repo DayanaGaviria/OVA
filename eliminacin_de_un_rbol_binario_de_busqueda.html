@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>ELIMINACIÓN DE UN ÁRBOL BINARIO DE BUSQUEDA | OVA: ARBOLES BINARIOS DE BUSQUEDA </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="DAYANA HERNANDEZ, JAIRO HERNANDEZ" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.3.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-8"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">OVA: ARBOLES BINARIOS DE BUSQUEDA</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">OPERACIONES EN ÁRBOLES BINARIOS DE BUSQUEDA</a></li>
+   <li><a href="introduccin.html" class="no-ch">INTRODUCCIÓN</a></li>
+   <li><a href="objetivos.html" class="no-ch">OBJETIVOS</a></li>
+   <li class="current-page-parent"><a href="rboles_binarios_de_busqueda.html" class="current-page-parent daddy">ÁRBOLES BINARIOS DE BUSQUEDA</a>
+   <ul>
+      <li class="current-page-parent"><a href="operaciones.html" class="current-page-parent daddy">OPERACIONES</a>
+      <ul>
+         <li><a href="busqueda_en_un_rbol_binario_de_busqueda.html" class="no-ch">BUSQUEDA EN UN ÁRBOL BINARIO DE BUSQUEDA</a></li>
+         <li><a href="insercin_en_un_rbol_binario_de_busqueda.html" class="no-ch">INSERCIÓN EN UN ÁRBOL BINARIO DE BUSQUEDA</a></li>
+         <li id="active"><a href="eliminacin_de_un_rbol_binario_de_busqueda.html" class="active no-ch">ELIMINACIÓN DE UN ÁRBOL BINARIO DE BUSQUEDA</a></li>
+         <li><a href="eficiencia_de_la_busqueda_en_un_rbol_binario_de_busqueda.html" class="no-ch">EFICIENCIA DE LA BUSQUEDA EN UN ÁRBOL BINARIO DE BUSQUEDA</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="actividad.html" class="no-ch">ACTIVIDAD</a></li>
+   <li><a href="referencia.html" class="no-ch">REFERENCIA</a></li>
+   <li><a href="creditos.html" class="no-ch">CREDITOS</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="insercin_en_un_rbol_binario_de_busqueda.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="eficiencia_de_la_busqueda_en_un_rbol_binario_de_busqueda.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">ELIMINACIÓN DE UN ÁRBOL BINARIO DE BUSQUEDA</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id5">
+<div class="iDevice emphasis0">
+<div id="ta5_85" class="block iDevice_content">
+<div style="font-size: 24px; text-align: justify;">
+<p style="font-size: 18px; text-align: justify;">La eliminación de un elemento presenta ciertas dificultades debido a que hay que enganchar los hijos del nodo eliminado con el padre, pero respetando la condición de que un nodo no puede tener más de dos hijos:</p>
+<p style="font-size: 18px; text-align: justify;">Analicemos los casos particulares:</p>
+</div>
+<div style="font-size: 18px; text-align: justify;">
+<ul style="font-size: 18px; text-align: justify;">
+<li style="font-size: 18px; text-align: justify;"><b>Eliminar un nodo hoja (sin hijos)</b></li>
+<li style="font-size: 18px; text-align: justify;"><b>Eliminar un nodo con solo un hijo</b></li>
+<li style="font-size: 18px; text-align: justify;"><b>Eliminar un nodo con ambos hijos</b><b></b></li>
+</ul>
+<p style="font-size: 18px; text-align: justify;"><b></b></p>
+<p style="font-size: 18px; text-align: justify;"><b>Eliminar un nodo hoja (sin hijos):</b></p>
+<p style="font-size: 18px; text-align: justify;"><span>El caso más sencillo, lo único que hay que hacer es borrar el nodo y establecer el apuntador de su padre a nulo.</span></p>
+<p style="font-size: 18px; text-align: justify;"><span><img src="eliminacion-caso-1.png" alt="" width="486" height="636" /></span></p>
+<p style="font-size: 18px; text-align: justify;"></p>
+<h3 style="font-size: 18px; text-align: justify;"><strong><em>Eliminar un Nodo con un subárbol hijo</em></strong><span> </span>:</h3>
+<p style="font-size: 18px; text-align: justify;"><span>Este caso tampoco es muy complicado, únicamente tenemos que borrar el Nodo y el subárbol que tenía pasa a ocupar su lugar.</span></p>
+<p style="font-size: 18px; text-align: justify;"><img src="eliminacion-caso-2.png" alt="" width="428" height="624" /></p>
+<p style="font-size: 18px; text-align: justify;"></p>
+<h3 style="font-size: 18px; text-align: justify;"><strong><em>Eliminar un Nodo con dos subárboles hijos</em></strong><span> </span>:</h3>
+<p style="font-size: 18px; text-align: justify;"><span>Este es un caso algo complejo, tenemos que tomar el </span><strong>hijo derecho</strong><span> del Nodo que queremos eliminar y recorrer hasta </span><strong>el hijo más a la izquierda</strong><span> ( hijo izquierdo y si este tiene hijo izquierdo repetir hasta llegar al último nodo a la izquierda), reemplazamos </span><strong>el valor</strong><span> del nodo que queremos eliminar por el nodo que encontramos ( </span><strong>el hijo más a la izquierda</strong><span> ), el nodo que encontramos por ser el más a la izquierda es imposible que tenga nodos a su izquierda pero si que es posible que tenga un subárbol a la derecha, para terminar solo nos queda proceder a eliminar este nodo de las formas que conocemos ( </span><strong>caso 1, caso 2</strong><span> ) y tendremos la eliminación completa.</span></p>
+<p style="font-size: 18px; text-align: justify;"><img src="eliminacion-caso-3-409x1024.png" alt="" width="560" height="1402" /></p>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="insercin_en_un_rbol_binario_de_busqueda.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="eficiencia_de_la_busqueda_en_un_rbol_binario_de_busqueda.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>

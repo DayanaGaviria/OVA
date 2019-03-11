@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>EFICIENCIA DE LA BUSQUEDA EN UN ÁRBOL BINARIO DE BUSQUEDA | OVA: ARBOLES BINARIOS DE BUSQUEDA </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="DAYANA HERNANDEZ, JAIRO HERNANDEZ" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.3.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">OVA: ARBOLES BINARIOS DE BUSQUEDA</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">OPERACIONES EN ÁRBOLES BINARIOS DE BUSQUEDA</a></li>
+   <li><a href="introduccin.html" class="no-ch">INTRODUCCIÓN</a></li>
+   <li><a href="objetivos.html" class="no-ch">OBJETIVOS</a></li>
+   <li class="current-page-parent"><a href="rboles_binarios_de_busqueda.html" class="current-page-parent daddy">ÁRBOLES BINARIOS DE BUSQUEDA</a>
+   <ul>
+      <li class="current-page-parent"><a href="operaciones.html" class="current-page-parent daddy">OPERACIONES</a>
+      <ul>
+         <li><a href="busqueda_en_un_rbol_binario_de_busqueda.html" class="no-ch">BUSQUEDA EN UN ÁRBOL BINARIO DE BUSQUEDA</a></li>
+         <li><a href="insercin_en_un_rbol_binario_de_busqueda.html" class="no-ch">INSERCIÓN EN UN ÁRBOL BINARIO DE BUSQUEDA</a></li>
+         <li><a href="eliminacin_de_un_rbol_binario_de_busqueda.html" class="no-ch">ELIMINACIÓN DE UN ÁRBOL BINARIO DE BUSQUEDA</a></li>
+         <li id="active"><a href="eficiencia_de_la_busqueda_en_un_rbol_binario_de_busqueda.html" class="active no-ch">EFICIENCIA DE LA BUSQUEDA EN UN ÁRBOL BINARIO DE BUSQUEDA</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="actividad.html" class="no-ch">ACTIVIDAD</a></li>
+   <li><a href="referencia.html" class="no-ch">REFERENCIA</a></li>
+   <li><a href="creditos.html" class="no-ch">CREDITOS</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="eliminacin_de_un_rbol_binario_de_busqueda.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="actividad.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">EFICIENCIA DE LA BUSQUEDA EN UN ÁRBOL BINARIO DE BUSQUEDA</h1></header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id6">
+<div class="iDevice emphasis0">
+<div id="ta6_85" class="block iDevice_content">
+<p style="font-size: 18px; text-align: justify;">Si la única operación permitida entre los elementos del conjunto es la comparación, entonces ¿qué tan eficiente es la búsqueda binaria?.</p>
+<p style="font-size: 18px; text-align: justify;">Todo algoritmo de búsqueda basado en comparaciones corresponde a algún<span> </span><i>árbol de decisión</i>. Cada nodo de dicho árbol corresponde al conjunto de elementos candidatos en donde se encuentra el elemento buscado, y que es consistente con las comparaciones realizadas entre los elementos. Los arcos del árbol corresponden a los resultados de las comparaciones, que en este caso pueden ser<span> </span><i>mayor que</i><span> </span>o<span> </span><i>menor que</i><span> </span>el elemento buscado, es decir, es un árbol de decisión binario.</p>
+<p style="font-size: 18px; text-align: justify;">El número de comparaciones realizadas por el algoritmo de búsqueda es igual a la altura del árbol de decisión (profundidad de la hoja más profunda).</p>
+<p style="font-size: 18px; text-align: justify;">Lema: sea<span> </span><i>D</i><span> </span>un árbol binario de altura<span> </span><i>h</i>.<span> </span><i>D</i><span> </span>tiene a lo más<span> </span><i>2<sup>h</sup></i><span> </span>hojas.</p>
+<p style="font-size: 18px; text-align: justify;">Demostración: por inducción. Si<span> </span><i>h = 0</i><span> </span>el árbol tiene un solo nodo que necesariamente es una hoja (no tiene hijos), con lo que se tiene el caso base. En el caso general, se tiene una raíz, que no puede ser una hoja, que posee un subárbol izquierdo y derecho, cada uno con una altura máxima de<span> </span><i>h-1</i>. Por hipótesis de inducción, los subárboles pueden tener a lo más<span> </span><i>2<sup>h-1</sup></i>hojas, dando un total de a lo más<span> </span><i>2<sup>h</sup></i><span> </span>hojas entre ambos subárboles.</p>
+<p style="font-size: 18px; text-align: justify;"><span>Lema: si un árbol binario de altura </span><i>h</i><span> tiene </span><i>t</i><span> hojas, entonces </span><i>h</i><span> ≥ log</span><sub>2</sub><span> </span><i>t</i><span>.</span></p>
+<p style="font-size: 18px; text-align: justify;">Demostración: directo del lema anterior.</p>
+<p style="font-size: 18px; text-align: justify;">Si<span> </span><i>n</i><span> </span>es el número de nodos de elementos del conjunto, el número de respuestas posibles (hojas del árbol de decisión) es de<span> </span><i>n+1</i>, el lema anterior implica que el costo en el peor caso es mayor o igual que el logaritmo del número de respuestas posibles.</p>
+<p style="font-size: 18px; text-align: justify;">Corolario: cualquier algoritmo de búsqueda mediante comparaciones se demora al menos<span> </span><sub><img src="https://users.dcc.uchile.cl/~bebustos/apuntes/cc3001/Diccionario/formula16.gif" /></sub><span> </span>preguntas en el peor caso. Por lo tanto, la búsqueda binaria es<span> </span><i>óptima</i>.</p>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="eliminacin_de_un_rbol_binario_de_busqueda.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="actividad.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="my_js.js"></script></body></html>
